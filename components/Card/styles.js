@@ -2,9 +2,6 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   card: {
-    width: 300,
-    maxWidth: '80%',
-    alignItems: 'center',
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 2},
     shadowRadius: 6,
