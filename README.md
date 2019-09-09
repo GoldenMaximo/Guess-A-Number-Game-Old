@@ -8,7 +8,7 @@ I created this app with the help of [Maximilian Schwarzmüller](https://www.udem
 * [Expo](https://expo.io/)
 * [React Native](https://facebook.github.io/react-native/)
 * [Flexbox](https://facebook.github.io/react-native/docs/flexbox)
-* My own creativity touch and styling
+* My own creative touch and styling
 
 ## Demo
 
