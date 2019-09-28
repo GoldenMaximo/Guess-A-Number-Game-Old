@@ -33,6 +33,10 @@ const styles = StyleSheet.create({
     width: 60,
     textAlign: 'center',
   },
+  summaryContainer: {
+    marginTop: 20,
+    alignItems: 'center',
+  },
 });
 
 export default styles;

@@ -4,6 +4,7 @@ import styles from './styles';
 import Card from '../../components/Card';
 import Colors from './../../constants/colors';
 import Input from './../../components/Input';
+import NumberContainer from './../../components/NumberContainer';
 
 const StartGameScreen = props => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -21,6 +22,9 @@ const StartGameScreen = props => {
 
   const confirmInputHandler = () => {
     const chosenNumber = parseInt(enteredValue);
+
+    Keyboard.dismiss();
+
     if (chosenNumber && chosenNumber <= 99) {
       setEnteredValue('');
       setConfirmed(true);
@@ -33,7 +37,13 @@ const StartGameScreen = props => {
   let confirmedOutput;
 
   if (confirmed) {
-    confirmedOutput = <Text>Chosen Number: {selectedNumber}</Text>
+    confirmedOutput = (
+      <Card style={styles.summaryContainer}>
+        <Text>You selected</Text>
+        <NumberContainer>{selectedNumber}</NumberContainer>
+        <Button title="START GAME" />
+      </Card>
+    )
   }
 
   return (
