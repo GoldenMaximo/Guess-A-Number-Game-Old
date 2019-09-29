@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 10,
     color: 'white',
+    fontFamily: 'open-sans-bold',
   },
   numberSelectionContainer: {
     width: 300,

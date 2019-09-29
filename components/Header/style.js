@@ -14,7 +14,6 @@ const Styles = StyleSheet.create({
   },
   headerTitle: {
     color: 'white',
-    fontSize: 18,
   }
 });
 
