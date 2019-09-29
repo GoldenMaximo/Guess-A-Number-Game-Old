@@ -30,7 +30,7 @@ const StartGameScreen = props => {
       setConfirmed(true);
       setSelectedNumber(parseInt(enteredValue));
     } else {
-      Alert.alert('Ayo what the fuck!', 'Valid numbers are between 1 and 99 nigga!', [{ text: 'Okay', style: 'destructive', onPress: resetInputHandler }])
+      Alert.alert('Ayo what you tryinna do?!', 'Valid numbers are between 1 and 99 nigga!', [{ text: 'Aiight', style: 'destructive', onPress: resetInputHandler }])
     }
   };
 
@@ -39,9 +39,9 @@ const StartGameScreen = props => {
   if (confirmed) {
     confirmedOutput = (
       <Card style={styles.summaryContainer}>
-        <Text>You selected</Text>
+        <Text>You chose</Text>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Button title="START GAME" />
+        <Button title="LET'S ROLL!" onPress={() => props.onStartGame(selectedNumber)} />
       </Card>
     )
   }
@@ -51,7 +51,7 @@ const StartGameScreen = props => {
       <View style={styles.screen}>
         <Text style={styles.title}>Start a New Game!</Text>
         <Card style={styles.numberSelectionContainer}>
-          <Text>Select a Number</Text>
+          <Text>C'mon, pick a number!</Text>
           <Input
             style={styles.input}
             placeholder='666'
