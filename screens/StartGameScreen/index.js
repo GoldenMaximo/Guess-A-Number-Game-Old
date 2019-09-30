@@ -7,6 +7,7 @@ import Input from './../../components/Input';
 import NumberContainer from './../../components/NumberContainer';
 import BodyText from './../../components/BodyText';
 import TitleText from './../../components/TitleText';
+import MainButton from './../../components/MainButton';
 
 const StartGameScreen = props => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -43,7 +44,8 @@ const StartGameScreen = props => {
       <Card style={styles.summaryContainer}>
         <Text>You chose</Text>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Button title="LET'S ROLL!" onPress={() => props.onStartGame(selectedNumber)} />
+        {/* <Button title="LET'S ROLL!" onPress={() => props.onStartGame(selectedNumber)} /> */}
+        <MainButton onPress={() => props.onStartGame(selectedNumber)}>LET'S ROLL!</MainButton>
       </Card>
     )
   }
@@ -70,7 +72,7 @@ const StartGameScreen = props => {
               <Button title='Reset' color={Colors.accent} onPress={resetInputHandler} />
             </View>
             <View style={styles.customButton}>
-              <Button title='Confirm' color='#00bfa5' onPress={confirmInputHandler} />
+              <Button title='Confirm' color={Colors.iceOnTheCake} onPress={confirmInputHandler} />
             </View>
           </View>
         </Card>

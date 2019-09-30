@@ -4,6 +4,7 @@ import styles from './styles';
 import NumberContainer from './../../components/NumberContainer';
 import Card from './../../components/Card';
 import TitleText from './../../components/TitleText';
+import MainButton from './../../components/MainButton';
 
 const generateRandomBetween = (min, max, exclude) => {
   min = Math.ceil(min);
@@ -28,7 +29,7 @@ const GameScreen = props => {
 
   useEffect(() => {
     if (currentGuess === userChoice) {
-      onGameOver(rounds)
+      onGameOver(rounds);
     }
   }, [currentGuess, userChoice, onGameOver]);
 
@@ -53,11 +54,11 @@ const GameScreen = props => {
 
   return (
     <View style={styles.screen}>
-      <TitleText>Your cheap smartphone guessed</TitleText>
-      <NumberContainer>{currentGuess}</NumberContainer>
+      <TitleText style={styles.TitleText}>Your cheap smartphone guessed</TitleText>
+      <NumberContainer style={styles.numberContainer}>{currentGuess}</NumberContainer>
       <Card style={styles.buttonContainer}>
-        <Button title="LIL BIT LOWER" onPress={nextGuessHandler.bind(this, 'lower')}/>
-        <Button title="EH, GO HIGHER" onPress={nextGuessHandler.bind(this, 'higher')}/>
+        <MainButton onPress={nextGuessHandler.bind(this, 'lower')}>LOWER</MainButton>
+        <MainButton onPress={nextGuessHandler.bind(this, 'higher')}>HIGHER</MainButton>
       </Card>
     </View>
   )

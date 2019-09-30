@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
+import Colors from './../../constants/colors';
 
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 10,
     alignItems: 'center',
-    backgroundColor: '#263238',
+    backgroundColor: Colors.screenBackground,
   },
   title: {
     fontSize: 20,
