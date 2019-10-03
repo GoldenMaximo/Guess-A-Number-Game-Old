@@ -20,11 +20,15 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["assets/fonts/*", "assets/*" ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.maximo.guessanumbergame",
+      "versionCode": 1,
+      "permissions": [],
+      "icon": "./assets/icon2.png"
     }
   }
 }
